@@ -8,3 +8,5 @@ Link to Functional/Non-Functional Requirements: https://docs.google.com/document
 Link to Use Case Diagram: https://miro.com/app/board/uXjVNjTzVbQ=/?share_link_id=888508820786
 
 Link to Class Diagram/ER Diagram: https://miro.com/app/board/uXjVNgPl1NE=/
+
+Link to Trello Board: https://trello.com/b/8jbdy87d/library-management
