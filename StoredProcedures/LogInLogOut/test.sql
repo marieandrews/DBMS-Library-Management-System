@@ -1,4 +1,4 @@
-
+-- this is a sample table to test the SP associated within this folder
 create database library;
 
 use library;
