@@ -1,25 +1,25 @@
-CREATE PROCEDURE login
-    @email VARCHAR(50),
-    @password VARCHAR(50)
+CREATE PROCEDURE LOGIN
+    @EMAIL VARCHAR(50),
+    @PASSWORD VARCHAR(50)
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    IF EXISTS (SELECT 1 FROM Users WHERE email = @email AND [password] = @password)
+    IF EXISTS (SELECT 1 FROM USERS WHERE EMAIL = @EMAIL AND [PASSWORD] = @PASSWORD)
     BEGIN
-        UPDATE Users SET isLoggedIn = 1 WHERE email = @Email;
-        SELECT 'Login successful' AS message, 1 as isSuccess;
+        UPDATE USERS SET ISLOGGEDIN = 1 WHERE EMAIL = @EMAIL;
+        SELECT 'LOGIN SUCCESSFUL' AS MESSAGE, 1 AS ISSUCCESS;
     END
     ELSE
     BEGIN
-        SELECT 'Invalid username or password' AS message, 0 as isSuccess;
+        SELECT 'INVALID USERNAME OR PASSWORD' AS MESSAGE, 0 AS ISSUCCESS;
     END
 END;
 GO
 
---drop procedure login
+--DROP PROCEDURE LOGIN
 
-exec login @email = 'vishnu222@gmail.com', @password = 'secretAgent';
-exec login @email = 'ameliepoulain@yahoo.com', @password = 'secretAgent';
+EXEC LOGIN @EMAIL = 'VISHNU222@GMAIL.COM', @PASSWORD = 'SECRETAGENT';
+EXEC LOGIN @EMAIL = 'AMELIEPOULAIN@YAHOO.COM', @PASSWORD = 'SECRETAGENT';
 
-select * from users;
+SELECT * FROM USERS;
