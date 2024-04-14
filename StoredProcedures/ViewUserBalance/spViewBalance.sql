@@ -18,6 +18,6 @@ END;
 go
 
 EXEC spViewBalance
-    @Username = 'testuser'
+    @Username = 'usernameVishnu'
 
 select * from users;
