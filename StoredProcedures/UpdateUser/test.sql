@@ -17,7 +17,7 @@ constraint Users_pk1 primary key (uuid)
 );
 
 insert into users values
-('testuser2', '123456', 'test user 1', 'test1@test.com', '+1 438 855 8480', '12345 street 2', 'sub', 'in-active', 0)
+('testuser2', '123456', 'test user 1', 'test1@test.com', '+1 438 855 8480', '12345 street 2', 'sub', 'in-active', 0),
 ('testuser', 'abcd', 'test user', 'test@test.com', '+1 438 855 8478', '12345 street', 'super', 'active', 1 )
 
 select * from users
