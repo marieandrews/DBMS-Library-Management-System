@@ -11,12 +11,15 @@ address varchar(100) not null,
 role varchar(50) not null,
 accountStatus varchar(50) not null,
 isLoggedIn bit not null,
+balance decimal(18,2),
 constraint Users_pk1 primary key (uuid)
 );
 
+DROP TABLE USERS;
+
 -- Some "dummy data" to test
 
-INSERT INTO Users (username, password, name, email, phoneNumber, address, role, accountStatus, isLoggedIn)
-VALUES ('usernameAmelie', 'SECRETAGENT', 'Amelie', 'AMELIEPOULAIN@YAHOO.COM', '3662448724', '23 Cherry Tree Ln', 'member', 'on hold', 0),
-('usernameVishnu', 'SECRETAGENT', 'Vishnu', 'VISHNU222@GMAIL.COM', '2478886555', '123 Alphabet St', 'member', 'good', 0);
+INSERT INTO Users (username, password, name, email, phoneNumber, address, role, accountStatus, isLoggedIn, balance)
+VALUES ('usernameAmelie', 'SECRETAGENT', 'Amelie', 'AMELIEPOULAIN@YAHOO.COM', '3662448724', '23 Cherry Tree Ln', 'member', 'on hold', 0, 10.62),
+('usernameVishnu', 'SECRETAGENT', 'Vishnu', 'VISHNU222@GMAIL.COM', '2478886555', '123 Alphabet St', 'member', 'good', 0, 35.50);
 
