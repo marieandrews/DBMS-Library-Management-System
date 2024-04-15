@@ -25,7 +25,8 @@ BEGIN
         FROM [Orders] o
         INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
         INNER JOIN Resources r ON od.ResourceID = r.ResourceID
-        INNER JOIN Users u ON o.id = u.id
+        INNER JOIN Users u ON o.id = u.uuid
+
         WHERE u.ISLOGGEDIN = 1;
     END
     ELSE
